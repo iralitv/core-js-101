@@ -68,7 +68,7 @@ function fromJSON(/* proto, json */) {
  *
  * All types of selectors can be combined using the combinators ' ','+','~','>' .
  *
- * The task is to design a single class, independent classes or classes hierarchy
+ * The src is to design a single class, independent classes or classes hierarchy
  * and implement the functionality to build the css selectors using the provided cssSelectorBuilder.
  * Each selector should have the stringify() method to output the string repsentation
  * according to css specification.

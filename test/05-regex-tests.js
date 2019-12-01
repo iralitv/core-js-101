@@ -1,5 +1,5 @@
 const assert = require('assert');
-const tasks = require('../task/05-regex-tasks');
+const tasks = require('../src/05-regex-tasks');
 it.optional = require('../extensions/it-optional');
 
 describe('05-regex-tasks', () => {
@@ -33,7 +33,7 @@ describe('05-regex-tasks', () => {
   });
 
 
-  it.optional('getRegexForPitSpot should be implemeted according to task', () => {
+  it.optional('getRegexForPitSpot should be implemeted according to src', () => {
     const result = tasks.getRegexForPitSpot();
 
     ['pit', 'spot', 'spate', 'slap two', 'respite'].forEach((str) => {
