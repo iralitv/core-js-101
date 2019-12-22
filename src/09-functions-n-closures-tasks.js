@@ -15,17 +15,15 @@
  * which works like applying function f to the result of applying function g to x, i.e.
  *  getComposition(f,g)(x) = f(g(x))
  *
- * @param {Function} f
- * @param {Function} g
+ * @param {Function} functions
  * @return {Function}
  *
  * @example
  *   getComposition(Math.sin, Math.asin)(x) => Math.sin(Math.asin(x))
  *
  */
-function getComposition(/* f, g */) {
-  throw new Error('Not implemented');
-}
+// eslint-disable-next-line max-len
+const getComposition = (...functions) => (args) => functions.reduceRight((arg, fn) => fn(arg), args);
 
 
 /**
@@ -44,8 +42,11 @@ function getComposition(/* f, g */) {
  *   power05(16) => 4
  *
  */
-function getPowerFunction(/* exponent */) {
-  throw new Error('Not implemented');
+function getPowerFunction(exponent) {
+  // eslint-disable-next-line func-names
+  return function (item) {
+    return item ** exponent;
+  };
 }
 
 
