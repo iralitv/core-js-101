@@ -174,7 +174,7 @@ function partialUsingArguments(fn, ...rest) {
  */
 function getIdGeneratorFunction(startFrom) {
   let currentCount = startFrom - 1;
-  return function () {
+  return function count() {
     currentCount += 1;
     return currentCount;
   };
