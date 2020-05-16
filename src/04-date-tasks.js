@@ -100,16 +100,15 @@ function timeSpanToString(startDate, endDate) {
  *    Date.UTC(2016,3,5,21, 0) => Math.PI/2
  */
 
-function angleBetweenClockHands(/* date */) {
-  throw new Error('Not implemented');
-  // const degreeInMinute = 0.5;
-  // const hoursInClock = (date.getHours() - 3) % 12;
-  // const minutes = hoursInClock * 60 + date.getMinutes();
-  // // eslint-disable-next-line no-mixed-operators
-  // const radians = minutes * degreeInMinute / 180 * Math.PI;
-  // return (radians > Math.PI) ? radians % Math.PI : radians;
+function angleBetweenClockHands(date) {
+  // throw new Error('Not implemented');
+  // eslint-disable-next-line no-mixed-operators
+  const hoursDegree = (date.getHours() % 12) * 30;
+  const minutesDegree = date.getMinutes() * 6;
+  const resultAngle = Math.abs(hoursDegree - minutesDegree);
+  console.log(resultAngle);
+  return (resultAngle * Math.PI) / 180;
 }
-
 
 module.exports = {
   parseDataFromRfc2822,
